@@ -5,10 +5,10 @@
     "AgentDeposit": "",
     "Cr8UsdMint": "",
     "LucidlyAdapter": "",
-    "Usdc": "0x75faf114eafb1BDbe2F0316DF893fd58CE46AA4d"
+    "Usdc": ""
   },
   "deposited_usdc_smallest": "unset",
-  "generated_at": "2026-06-04T07:05:37Z",
+  "generated_at": "2026-06-04T07:06:46Z",
   "last_event_block": "unset",
   "network": "arbitrum-sepolia",
   "parked_syusd_smallest": "unset",

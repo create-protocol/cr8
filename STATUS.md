@@ -1,6 +1,6 @@
 # Create Protocol — Phase 1 Status
 
-_Auto-generated at 2026-06-04T07:05:37Z. Source: `scripts/build_status.py`._
+_Auto-generated at 2026-06-04T07:06:46Z. Source: `scripts/build_status.py`._
 _Machine-readable: [`status.json`](./status.json)._
 
 ## Network
@@ -16,7 +16,7 @@ _Machine-readable: [`status.json`](./status.json)._
 | `AgentDeposit` | _unset_ |
 | `Cr8UsdMint`   | _unset_ |
 | `LucidlyAdapter` | _unset_ |
-| `USDC` | `0x75faf114eafb1BDbe2F0316DF893fd58CE46AA4d` |
+| `USDC` | _unset_ |
 
 ## Registry state
 
