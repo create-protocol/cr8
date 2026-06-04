@@ -55,7 +55,11 @@ Supporting Solidity primitives (mirrored under this org for discovery; issues li
 ## Layout
 
 - `research/` — decision-support documents (DePIN cost benchmarks, tokenomics notes, market sizing).
-- Specs, governance constitution, and integration docs land as the tracked issues close.
+- `specs/` — protocol-level integration specs.
+  - [`specs/switchboard-integration.md`](./specs/switchboard-integration.md) — switchboard as the agent-wallet primitive behind `AgentDeposit`.
+  - [`specs/arka-cr8-client.md`](./specs/arka-cr8-client.md) — Rust SDK module contract (the `CR8Client` trait that arka implements).
+  - [`specs/arbitrum-cli-cr8-subcommand.md`](./specs/arbitrum-cli-cr8-subcommand.md) — agent-first CLI surface; JSON in, JSON out, MCP-compatible.
+- Governance constitution and additional integration docs land as the tracked issues close.
 
 ## Where to track work
 
