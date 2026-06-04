@@ -1,0 +1,56 @@
+name: status
+
+on:
+  schedule:
+    # every 10 minutes
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [research/depin-benchmark]
+    paths:
+      - scripts/build_status.py
+      - .github/workflows/status.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: status
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate STATUS.md + status.json
+        env:
+          CR8_RPC_URL: ${{ secrets.CR8_RPC_URL || 'https://sepolia-rollup.arbitrum.io/rpc' }}
+          CR8_AGENT_DEPOSIT_ADDR: ${{ vars.CR8_AGENT_DEPOSIT_ADDR }}
+          CR8_CR8USD_MINT_ADDR: ${{ vars.CR8_CR8USD_MINT_ADDR }}
+          CR8_LUCIDLY_ADAPTER_ADDR: ${{ vars.CR8_LUCIDLY_ADAPTER_ADDR }}
+          CR8_USDC_ADDR: ${{ vars.CR8_USDC_ADDR }}
+          CR8_BUILD_STATUS: green
+        run: python scripts/build_status.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name "kcolb-status-bot"
+          git config user.email "status-bot@kcolbchain.com"
+          if ! git diff --quiet -- STATUS.md status.json; then
+            git add STATUS.md status.json
+            git commit -m "status: refresh $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          else
+            echo "no changes"
+          fi

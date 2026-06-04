@@ -1,0 +1,17 @@
+{
+  "block_number": null,
+  "build_status": "green",
+  "deployments": {
+    "AgentDeposit": "",
+    "Cr8UsdMint": "",
+    "LucidlyAdapter": "",
+    "Usdc": "0x75faf114eafb1BDbe2F0316DF893fd58CE46AA4d"
+  },
+  "deposited_usdc_smallest": "unset",
+  "generated_at": "2026-06-04T07:05:37Z",
+  "last_event_block": "unset",
+  "network": "arbitrum-sepolia",
+  "parked_syusd_smallest": "unset",
+  "registered_agents": "unset",
+  "rpc_url": "https://sepolia-rollup.arbitrum.io/rpc"
+}

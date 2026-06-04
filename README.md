@@ -13,7 +13,7 @@ Canonical public tracker for the Create Protocol relaunch. Strategy, specs, cros
 | 3 — CR8 token + staking | Governance + real-yield staking (stakers earn CR8-USD from burn toll + vault spread) — launches only after traction gates are met | Gated |
 | 4+ — Revenue expansion | Compute marketplace, creative agent registry, private inference, DC finance — each turns on when demand exists, not on a calendar | Roadmap |
 
-Full plan: see tracked issues and [`research/`](./research).
+Full plan: see tracked issues and [`research/`](./research). Live state of the Phase 1 deployment, registered-agent count, and `AgentDeposit` balance is auto-refreshed every 10 minutes — see [`STATUS.md`](./STATUS.md) (human) and [`status.json`](./status.json) (machine).
 
 ## Architecture
 
@@ -60,6 +60,7 @@ Supporting Solidity primitives (mirrored under this org for discovery; issues li
   - [`specs/arka-cr8-client.md`](./specs/arka-cr8-client.md) — Rust SDK module contract (the `CR8Client` trait that arka implements).
   - [`specs/arbitrum-cli-cr8-subcommand.md`](./specs/arbitrum-cli-cr8-subcommand.md) — agent-first CLI surface; JSON in, JSON out, MCP-compatible.
   - [`specs/mcp-agent-surface.md`](./specs/mcp-agent-surface.md) — canonical MCP server tool list, JSON schemas, auth model. LLM clients call Create Protocol through this.
+  - [`specs/resolver-integration.md`](./specs/resolver-integration.md) — best-execution layer via `kcolbchain/resolver` for agent payouts and CR8-USD mint/redeem.
 - Governance constitution and additional integration docs land as the tracked issues close.
 
 ## Where to track work
