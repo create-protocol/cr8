@@ -59,6 +59,7 @@ Supporting Solidity primitives (mirrored under this org for discovery; issues li
   - [`specs/switchboard-integration.md`](./specs/switchboard-integration.md) — switchboard as the agent-wallet primitive behind `AgentDeposit`.
   - [`specs/arka-cr8-client.md`](./specs/arka-cr8-client.md) — Rust SDK module contract (the `CR8Client` trait that arka implements).
   - [`specs/arbitrum-cli-cr8-subcommand.md`](./specs/arbitrum-cli-cr8-subcommand.md) — agent-first CLI surface; JSON in, JSON out, MCP-compatible.
+  - [`specs/mcp-agent-surface.md`](./specs/mcp-agent-surface.md) — canonical MCP server tool list, JSON schemas, auth model. LLM clients call Create Protocol through this.
 - Governance constitution and additional integration docs land as the tracked issues close.
 
 ## Where to track work
