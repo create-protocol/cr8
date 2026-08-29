@@ -1,6 +1,6 @@
 # Create Protocol — Phase 1 Status
 
-_Auto-generated at 2026-08-29T14:16:00Z. Source: `scripts/build_status.py`._
+_Auto-generated at 2026-08-29T17:44:37Z. Source: `scripts/build_status.py`._
 _Machine-readable: [`status.json`](./status.json)._
 
 ## Network
